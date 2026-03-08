@@ -1,8 +1,12 @@
+# MSCS532 Assignment 1
+# Insertion Sort in Monotonically Decreasing Order
+
 def insertion_sort_desc(arr):
     for j in range(1, len(arr)):
         key = arr[j]
         i = j - 1
 
+        # move smaller elements to the right
         while i >= 0 and arr[i] < key:
             arr[i + 1] = arr[i]
             i -= 1
@@ -12,7 +16,7 @@ def insertion_sort_desc(arr):
     return arr
 
 
-numbers = [5, 2, 4, 6, 1, 3]
+numbers = [7, 9, 4, 6, 5, 8]
 
 print("Original array:", numbers)
 
